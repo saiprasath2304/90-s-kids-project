@@ -31,17 +31,17 @@ background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAo
         <audio id="audio8" src="../audio/Manjal-Veiyil.mp3" preload="auto"></audio>
         <audio id="audio9" src="../audio/Pala Palakura.mp3" preload="auto"></audio>
         <hr>
-        <button class="playSound" data-sound="audio1" data-bs-toggle="tooltip" data-bs-placement="top" title="devuda devuda">1</button>
-        <button class="playSound" data-sound="audio2" data-bs-toggle="tooltip" data-bs-placement="top" title="sarvam-neethane">2</button>
-        <button class="playSound" data-sound="audio3" data-bs-toggle="tooltip" data-bs-placement="right" title="kaveri aarum">3</button><br>
-        <button class="playSound" data-sound="audio4" data-bs-toggle="tooltip" data-bs-placement="top" title="kannum kannum nokia">4</button>
-        <button class="playSound" data-sound="audio5" data-bs-toggle="tooltip" data-bs-placement="top" title="Kalyaanam-Thaan-Kattikittu">5</button>
-        <button class="playSound" data-sound="audio6" data-bs-toggle="tooltip" data-bs-placement="right" title="appadi podu">6</button><br>
-        <button class="playSound" data-sound="audio7" data-bs-toggle="tooltip" data-bs-placement="top" title="I'm a barbie girl">7</button>
-        <button class="playSound" data-sound="audio8" data-bs-toggle="tooltip" data-bs-placement="top" title="manjal veyil">8</button>
-        <button class="playSound" data-sound="audio9" data-bs-toggle="tooltip" data-bs-placement="right" title="pala palakura">9</button>
+        <button class="playSound" data-sound="audio1" data-bs-toggle="tooltip" data-bs-placement="top" title="devuda devuda" style="display: none;">1</button>
+        <button class="playSound" data-sound="audio2" data-bs-toggle="tooltip" data-bs-placement="top" title="sarvam-neethane" style="display: none;">2</button>
+        <button class="playSound" data-sound="audio3" data-bs-toggle="tooltip" data-bs-placement="right" title="kaveri aarum" style="display: none;">3</button><br>
+        <button class="playSound" data-sound="audio4" data-bs-toggle="tooltip" data-bs-placement="top" title="kannum kannum nokia" style="display: none;">4</button>
+        <button class="playSound" data-sound="audio5" data-bs-toggle="tooltip" data-bs-placement="top" title="Kalyaanam-Thaan-Kattikittu" style="display: none;">5</button>
+        <button class="playSound" data-sound="audio6" data-bs-toggle="tooltip" data-bs-placement="right" title="appadi podu" style="display: none;">6</button><br>
+        <button class="playSound" data-sound="audio7" data-bs-toggle="tooltip" data-bs-placement="top" title="I'm a barbie girl" style="display: none;">7</button>
+        <button class="playSound" data-sound="audio8" data-bs-toggle="tooltip" data-bs-placement="top" title="manjal veyil" style="display: none;">8</button>
+        <button class="playSound" data-sound="audio9" data-bs-toggle="tooltip" data-bs-placement="right" title="pala palakura" style="display: none;">9</button>
 
-        <p><button type="button" onclick="show()" id="btnID"> click to explore! </button></p>
+        <p><button type="button" onclick="show()" id="btnID"> click to open phone! </button></p>
         <p>
         <script>
                 function show() {
@@ -53,6 +53,11 @@ background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAo
                     
                     document.getElementById('btnID')
                             .style.display = "none";
+                    const playSoundElements = document.querySelectorAll('.playSound');
+    
+                    playSoundElements.forEach(function(element) {
+                        element.removeAttribute('style');
+                    });
                 }
             </script>
             
